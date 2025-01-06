@@ -40,5 +40,22 @@ int getSecondLargest(vector<int> &arr) {
         return (sLargest == INT_MIN) ? -1 : sLargest;
     }
 
-// Optimal approach: ??
+// Optimal approach: 
+
+ int getSecondLargest(vector<int> &arr) {
+        // Code Here
+        int lar = arr[0], secLar = INT_MIN;
+        
+        for(int i=0;i<arr.size();i++) {
+            if(arr[i]>lar) {
+                secLar = lar;
+                lar = arr[i];
+            }
+            else if((arr[i]<lar) && (secLar<arr[i]) ) {
+                secLar = arr[i];
+            }
+        }
+        
+        return secLar == INT_MIN ? -1 : secLar;
+    }
 
