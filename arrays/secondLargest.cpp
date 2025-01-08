@@ -58,4 +58,3 @@ int getSecondLargest(vector<int> &arr) {
         
         return secLar == INT_MIN ? -1 : secLar;
     }
-
